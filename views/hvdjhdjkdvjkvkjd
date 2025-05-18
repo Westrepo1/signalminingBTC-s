@@ -1,0 +1,323 @@
+ <select class="form-control" name="country" id="country" required>
+                <option selected="true" disabled="disabled">Choose Country</option>
+    
+            </select>
+
+
+             <select name="currency" itemid="currency" id="select_c" class="form-control   select2" onchange="changecurr()"
+                        style="width: 100%">
+                        
+                        <option selected="true" disabled="disabled">Select Currency</option>
+                                                    <option id="AED" value="د.إ">
+                                AED (د.إ)</option>
+                                                    <option id="AFN" value="Af">
+                                AFN (Af)</option>
+                                                    <option id="ALL" value="Lek">
+                                ALL (Lek)</option>
+                                                    <option id="ANG" value="ƒ">
+                                ANG (ƒ)</option>
+                                                    <option id="AOA" value="Kz">
+                                AOA (Kz)</option>
+                                                    <option id="ARS" value="$">
+                                ARS ($)</option>
+                                                    <option id="AUD" value="$">
+                                AUD ($)</option>
+                                                    <option id="AWG" value="ƒ">
+                                AWG (ƒ)</option>
+                                                    <option id="AZN" value="ман">
+                                AZN (ман)</option>
+                                                    <option id="BAM" value="KM">
+                                BAM (KM)</option>
+                                                    <option id="BBD" value="$">
+                                BBD ($)</option>
+                                                    <option id="BDT" value="৳">
+                                BDT (৳)</option>
+                                                    <option id="BGN" value="лв">
+                                BGN (лв)</option>
+                                                    <option id="BHD" value=".د.ب">
+                                BHD (.د.ب)</option>
+                                                    <option id="BIF" value="FBu">
+                                BIF (FBu)</option>
+                                                    <option id="BMD" value="$">
+                                BMD ($)</option>
+                                                    <option id="BND" value="$">
+                                BND ($)</option>
+                                                    <option id="BOB" value="$b">
+                                BOB ($b)</option>
+                                                    <option id="BRL" value="R$">
+                                BRL (R$)</option>
+                                                    <option id="BTC" value="BTC">
+                                BTC (BTC)</option>
+                                                    <option id="BSD" value="$">
+                                BSD ($)</option>
+                                                    <option id="BTN" value="Nu.">
+                                BTN (Nu.)</option>
+                                                    <option id="BWP" value="P">
+                                BWP (P)</option>
+                                                    <option id="BYR" value="p.">
+                                BYR (p.)</option>
+                                                    <option id="BZD" value="BZ$">
+                                BZD (BZ$)</option>
+                                                    <option id="CAD" value="$">
+                                CAD ($)</option>
+                                                    <option id="CDF" value="FC">
+                                CDF (FC)</option>
+                                                    <option id="CHF" value="CHF">
+                                CHF (CHF)</option>
+                                                    <option id="CLP" value="$">
+                                CLP ($)</option>
+                                                    <option id="CNY" value="¥">
+                                CNY (¥)</option>
+                                                    <option id="COP" value="$">
+                                COP ($)</option>
+                                                    <option id="CRC" value="₡">
+                                CRC (₡)</option>
+                                                    <option id="CUP" value="⃌">
+                                CUP (⃌)</option>
+                                                    <option id="CVE" value="$">
+                                CVE ($)</option>
+                                                    <option id="CZK" value="Kč">
+                                CZK (Kč)</option>
+                                                    <option id="DJF" value="Fdj">
+                                DJF (Fdj)</option>
+                                                    <option id="DKK" value="kr">
+                                DKK (kr)</option>
+                                                    <option id="DOP" value="RD$">
+                                DOP (RD$)</option>
+                                                    <option id="DZD" value="دج">
+                                DZD (دج)</option>
+                                                    <option id="EGP" value="£">
+                                EGP (£)</option>
+                                                    <option id="ETB" value="Br">
+                                ETB (Br)</option>
+                                                    <option id="EUR" value="€">
+                                EUR (€)</option>
+                                                    <option id="ETH" value="ETH">
+                                ETH (ETH)</option>
+                                                    <option id="FJD" value="$">
+                                FJD ($)</option>
+                                                    <option id="FKP" value="£">
+                                FKP (£)</option>
+                                                    <option id="GBP" value="£">
+                                GBP (£)</option>
+                                                    <option id="GEL" value="ლ">
+                                GEL (ლ)</option>
+                                                    <option id="GHS" value="¢">
+                                GHS (¢)</option>
+                                                    <option id="GIP" value="£">
+                                GIP (£)</option>
+                                                    <option id="GMD" value="D">
+                                GMD (D)</option>
+                                                    <option id="GNF" value="FG">
+                                GNF (FG)</option>
+                                                    <option id="GTQ" value="Q">
+                                GTQ (Q)</option>
+                                                    <option id="GYD" value="$">
+                                GYD ($)</option>
+                                                    <option id="HKD" value="$">
+                                HKD ($)</option>
+                                                    <option id="HNL" value="L">
+                                HNL (L)</option>
+                                                    <option id="HRK" value="kn">
+                                HRK (kn)</option>
+                                                    <option id="HTG" value="G">
+                                HTG (G)</option>
+                                                    <option id="HUF" value="Ft">
+                                HUF (Ft)</option>
+                                                    <option id="IDR" value="Rp">
+                                IDR (Rp)</option>
+                                                    <option id="ILS" value="₪">
+                                ILS (₪)</option>
+                                                    <option id="INR" value="₹">
+                                INR (₹)</option>
+                                                    <option id="IQD" value="ع.د">
+                                IQD (ع.د)</option>
+                                                    <option id="IRR" value="﷼">
+                                IRR (﷼)</option>
+                                                    <option id="ISK" value="kr">
+                                ISK (kr)</option>
+                                                    <option id="JEP" value="£">
+                                JEP (£)</option>
+                                                    <option id="JMD" value="J$">
+                                JMD (J$)</option>
+                                                    <option id="JOD" value="JD">
+                                JOD (JD)</option>
+                                                    <option id="JPY" value="¥">
+                                JPY (¥)</option>
+                                                    <option id="KES" value="KSh">
+                                KES (KSh)</option>
+                                                    <option id="KGS" value="лв">
+                                KGS (лв)</option>
+                                                    <option id="KHR" value="៛">
+                                KHR (៛)</option>
+                                                    <option id="KMF" value="CF">
+                                KMF (CF)</option>
+                                                    <option id="KPW" value="₩">
+                                KPW (₩)</option>
+                                                    <option id="KRW" value="₩">
+                                KRW (₩)</option>
+                                                    <option id="KWD" value="د.ك">
+                                KWD (د.ك)</option>
+                                                    <option id="KYD" value="$">
+                                KYD ($)</option>
+                                                    <option id="KZT" value="лв">
+                                KZT (лв)</option>
+                                                    <option id="LAK" value="₭">
+                                LAK (₭)</option>
+                                                    <option id="LBP" value="£">
+                                LBP (£)</option>
+                                                    <option id="LKR" value="₨">
+                                LKR (₨)</option>
+                                                    <option id="LRD" value="$">
+                                LRD ($)</option>
+                                                    <option id="LSL" value="L">
+                                LSL (L)</option>
+                                                    <option id="LTL" value="Lt">
+                                LTL (Lt)</option>
+                                                    <option id="LVL" value="Ls">
+                                LVL (Ls)</option>
+                                                    <option id="LYD" value="ل.د">
+                                LYD (ل.د)</option>
+                                                    <option id="MAD" value="د.م.">
+                                MAD (د.م.)</option>
+                                                    <option id="MDL" value="L">
+                                MDL (L)</option>
+                                                    <option id="MGA" value="Ar">
+                                MGA (Ar)</option>
+                                                    <option id="MKD" value="ден">
+                                MKD (ден)</option>
+                                                    <option id="MMK" value="K">
+                                MMK (K)</option>
+                                                    <option id="MNT" value="₮">
+                                MNT (₮)</option>
+                                                    <option id="MOP" value="MOP$">
+                                MOP (MOP$)</option>
+                                                    <option id="MRO" value="UM">
+                                MRO (UM)</option>
+                                                    <option id="MUR" value="₨">
+                                MUR (₨)</option>
+                                                    <option id="MVR" value=".ރ">
+                                MVR (.ރ)</option>
+                                                    <option id="MWK" value="MK">
+                                MWK (MK)</option>
+                                                    <option id="MXN" value="$">
+                                MXN ($)</option>
+                                                    <option id="MYR" value="RM">
+                                MYR (RM)</option>
+                                                    <option id="MZN" value="MT">
+                                MZN (MT)</option>
+                                                    <option id="NAD" value="$">
+                                NAD ($)</option>
+                                                    <option id="NGN" value="₦">
+                                NGN (₦)</option>
+                                                    <option id="NIO" value="C$">
+                                NIO (C$)</option>
+                                                    <option id="NOK" value="kr">
+                                NOK (kr)</option>
+                                                    <option id="NPR" value="₨">
+                                NPR (₨)</option>
+                                                    <option id="NZD" value="$">
+                                NZD ($)</option>
+                                                    <option id="OMR" value="﷼">
+                                OMR (﷼)</option>
+                                                    <option id="PAB" value="B/.">
+                                PAB (B/.)</option>
+                                                    <option id="PEN" value="S/.">
+                                PEN (S/.)</option>
+                                                    <option id="PGK" value="K">
+                                PGK (K)</option>
+                                                    <option id="PHP" value="₱">
+                                PHP (₱)</option>
+                                                    <option id="PKR" value="₨">
+                                PKR (₨)</option>
+                                                    <option id="PLN" value="zł">
+                                PLN (zł)</option>
+                                                    <option id="PYG" value="Gs">
+                                PYG (Gs)</option>
+                                                    <option id="QAR" value="﷼">
+                                QAR (﷼)</option>
+                                                    <option id="RON" value="lei">
+                                RON (lei)</option>
+                                                    <option id="RSD" value="Дин.">
+                                RSD (Дин.)</option>
+                                                    <option id="RUB" value="руб">
+                                RUB (руб)</option>
+                                                    <option id="RWF" value="ر.س">
+                                RWF (ر.س)</option>
+                                                    <option id="SAR" value="﷼">
+                                SAR (﷼)</option>
+                                                    <option id="SBD" value="$">
+                                SBD ($)</option>
+                                                    <option id="SCR" value="₨">
+                                SCR (₨)</option>
+                                                    <option id="SDG" value="£">
+                                SDG (£)</option>
+                                                    <option id="SEK" value="kr">
+                                SEK (kr)</option>
+                                                    <option id="SGD" value="$">
+                                SGD ($)</option>
+                                                    <option id="SHP" value="£">
+                                SHP (£)</option>
+                                                    <option id="SLL" value="Le">
+                                SLL (Le)</option>
+                                                    <option id="SOS" value="S">
+                                SOS (S)</option>
+                                                    <option id="SRD" value="$">
+                                SRD ($)</option>
+                                                    <option id="STD" value="Db">
+                                STD (Db)</option>
+                                                    <option id="SVC" value="$">
+                                SVC ($)</option>
+                                                    <option id="SYP" value="£">
+                                SYP (£)</option>
+                                                    <option id="SZL" value="L">
+                                SZL (L)</option>
+                                                    <option id="THB" value="฿">
+                                THB (฿)</option>
+                                                    <option id="TJS" value="TJS">
+                                TJS (TJS)</option>
+                                                    <option id="TMT" value="m">
+                                TMT (m)</option>
+                                                    <option id="TND" value="د.ت">
+                                TND (د.ت)</option>
+                                                    <option id="TOP" value="T$">
+                                TOP (T$)</option>
+                                                    <option id="TRY" value="₤">
+                                TRY (₤)</option>
+                                                    <option id="TTD" value="$">
+                                TTD ($)</option>
+                                                    <option id="TWD" value="NT$">
+                                TWD (NT$)</option>
+                                                    <option id="UAH" value="₴">
+                                UAH (₴)</option>
+                                                    <option id="UGX" value="USh">
+                                UGX (USh)</option>
+                                                    <option id="USD" value="$">
+                                USD ($)</option>
+                                                    <option id="UYU" value="$U">
+                                UYU ($U)</option>
+                                                    <option id="UZS" value="лв">
+                                UZS (лв)</option>
+                                                    <option id="VEF" value="Bs">
+                                VEF (Bs)</option>
+                                                    <option id="VND" value="₫">
+                                VND (₫)</option>
+                                                    <option id="VUV" value="VT">
+                                VUV (VT)</option>
+                                                    <option id="WST" value="WS$">
+                                WST (WS$)</option>
+                                                    <option id="XAF" value="FCFA">
+                                XAF (FCFA)</option>
+                                                    <option id="XCD" value="$">
+                                XCD ($)</option>
+                                                    <option id="XPF" value="F">
+                                XPF (F)</option>
+                                                    <option id="YER" value="﷼">
+                                YER (﷼)</option>
+                                                    <option id="ZAR" value="R">
+                                ZAR (R)</option>
+                                                    <option id="ZMK" value="ZK">
+                                ZMK (ZK)</option>
+                                                    <option id="ZWL" value="Z$">
+                                ZWL (Z$)</option>
+                                            </select>
