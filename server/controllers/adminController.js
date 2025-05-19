@@ -435,7 +435,7 @@ module.exports.viewVerify = async(req, res)=>{
 module.exports.deleteVerification = async(req, res)=>{
   try {
     await Verify.deleteOne({ _id: req.params.id });
-    res.redirect("/adminRoute")
+    res.redirect("/adminRoustes")
   
 } catch (error) {
     console.log(error)
@@ -515,7 +515,7 @@ module.exports.editLivetrade_post = async(req, res)=>{
 module.exports.deleteLivetrade = async(req, res)=>{
   try {
     await Trade.deleteOne({ _id: req.params.id });
-    res.redirect("/adminRoute")
+    res.redirect("/adminRoustes")
   
 } catch (error) {
     console.log(error)
@@ -599,7 +599,7 @@ module.exports.editUpgrade_post  = async(req, res)=>{
 module.exports.deleteUpgrade = async(req, res)=>{
   try {
     await Upgrade.deleteOne({ _id: req.params.id });
-    res.redirect("/adminRoute")
+    res.redirect("/adminRoustes")
   
 } catch (error) {
     console.log(error)
