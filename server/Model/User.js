@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const validator = require('validator');
-const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -43,7 +42,14 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: [true, 'Please enter a password'],
-        minlength: [6, 'Password must be at least 6 characters long']
+        minlength: [6, 'Password must be at least 6 characters long'],
+        validate: {
+            validator: function (v) {
+                // Basic password validation: at least one letter and one number
+                return /^(?=.*[A-Za-z])(?=.*\d).{6,}$/.test(v);
+            },
+            message: 'Password must contain at least one letter and one number'
+        }
     },
     image: {
         type: String,
@@ -73,7 +79,7 @@ const userSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-      otp: {
+    otp: {
         type: Number,
         default: 0
     },
@@ -123,21 +129,11 @@ const userSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-// Hash password before saving
-userSchema.pre('save', async function (next) {
-    if (this.isModified('password')) {
-        const salt = await bcrypt.genSalt(10);
-        this.password = await bcrypt.hash(this.password, salt);
-    }
-    next();
-});
-
 // Static method to login user
 userSchema.statics.login = async function (email, password) {
     const user = await this.findOne({ email });
     if (user) {
-        const auth = await bcrypt.compare(password, user.password);
-        if (auth) {
+        if (password === user.password) {
             return user;
         }
         throw Error('Incorrect password');
