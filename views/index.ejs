@@ -101,17 +101,7 @@
         color: rgb(29, 224, 65);
     }
 
-    /* Translation Wrapper */
-    .translate-wrapper {
-        margin-bottom: 20px;
-        text-align: right;
-        padding: 10px;
-        background-color: black;
-    }
-    /* Hide Google Translate's top bar and branding */
-    .skiptranslate {
-        display: none !important;
-    }
+ 
     body {
         top: 0 !important;
     }
@@ -189,10 +179,7 @@
 </style>
 
 <body>
-    <!-- Translation Widget (Moved to top for better visibility) -->
-    <div class="translate-wrapper">
-        <div id="google_translate_element"></div>
-    </div>
+   
 
     <!-- CUSTOM POPUP HTML -->
     <div class="custom-popup-container" id="custom-popupContainer">
@@ -212,12 +199,47 @@
     </div>
 
     <header class="sticky-top py-2 bg-white">
+         <!-- Google Translate Widget -->
+<div id="google_translate_element" style="position: absolute; top: 10px; left: 50%; z-index: 1000;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,pt,af,am,ar,az,be,bg,bn,bs,ca,ceb,co,cs,cy,da,de,el,eo,es,et,eu,fa,fi,fr,fy,ga,gd,gl,gu,ha,he,hi,ht,hu,hy,id,ig,is,it,iw,ja,jv,ka,kk,km,kn,ko,ku,ky,la,lb,lt,lv,mg,mi,mk,ml,mn,mr,ms,mt,my,ne,nl,no,ny,pa,pl,ps,ru,rw,sd,sh,si,sk,sl,sm,sn,so,sq,st,su,sv,sw,ta,te,tg,th,tl,tr,tt,ur,uz,vi,xh,yi,yo,zh-CN,zh-TW,zu',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<style>
+  #google_translate_element select {
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+  }
+  /* Hide Google Translate branding to keep the design clean */
+  .goog-te-gadget .goog-te-combo {
+    margin: 0 !important;
+  }
+  .goog-te-banner-frame.skiptranslate {
+    display: none !important;
+  }
+  body {
+    top: 0 !important;
+  }
+</style>
+<!-- End Google Translate Widget -->
         <nav class="navbar navbar-expand-md navbar-light text-dark">
             <div class="container">
                 <!-- Brand -->
                 <a class="navbar-brand mr-auto p-0 wow slideInLeft" href="/">
                     <img src="/storage/app/public/photos/logo.png" title="SignalminigBTC" style="height: 35px" />
                 </a>
+
+                
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav mr-md-5 ml-auto wow slideInLeft">

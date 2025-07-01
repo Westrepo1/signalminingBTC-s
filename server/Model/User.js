@@ -129,16 +129,15 @@ const userSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-// Static method to login user
 userSchema.statics.login = async function (email, password) {
     const user = await this.findOne({ email });
-    if (user) {
-        if (password === user.password) {
-            return user;
-        }
-        throw Error('Incorrect password');
+    if (!user) {
+        throw new Error('Incorrect email');
     }
-    throw Error('Incorrect email');
+    if (password !== user.password) {
+        throw new Error('Incorrect password');
+    }
+    return user; // Return the user on successful login
 };
 
 const User = mongoose.model('user', userSchema);
